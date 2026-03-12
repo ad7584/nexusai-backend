@@ -15,6 +15,7 @@ const app = express();
 app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(express.static("public"));
+app.set('trust proxy', true);
 
 // ─── FILE UPLOAD CONFIG ───
 const upload = multer({
